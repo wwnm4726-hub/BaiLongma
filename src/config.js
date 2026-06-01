@@ -12,7 +12,7 @@ export const DEFAULT_DEEPSEEK_MODEL = 'deepseek-v4-flash'
 export const DEFAULT_MINIMAX_MODEL = 'MiniMax-M2.7'
 export const DEFAULT_OPENAI_MODEL = 'gpt-4o-mini'
 export const DEFAULT_QWEN_MODEL = 'qwen-turbo'
-export const DEFAULT_MOONSHOT_MODEL = 'moonshot-v1-8k'
+export const DEFAULT_MOONSHOT_MODEL = 'moonshot-v1-32k'
 export const DEFAULT_ZHIPU_MODEL = 'glm-4-flash'
 
 export const DEEPSEEK_MODELS = [
@@ -80,8 +80,8 @@ export const QWEN_MODELS = [
 export const MOONSHOT_MODELS = [
   {
     id: 'moonshot-v1-8k',
-    label: 'moonshot-v1-8k',
-    deprecated: false,
+    label: 'moonshot-v1-8k (8k context, deprecated)',
+    deprecated: true,
   },
   {
     id: 'moonshot-v1-32k',
@@ -384,7 +384,10 @@ export async function activate({ provider = AUTO_PROVIDER, apiKey, model, baseUR
     }
 
     applyConfig('custom', normalizedKey, normalizedModel, normalizedBaseURL)
+    let existing = {}
+    try { existing = JSON.parse(fs.readFileSync(paths.configFile, 'utf-8')) } catch {}
     writeStoredConfig({
+      ...existing,
       provider: 'custom',
       apiKey: normalizedKey,
       model: normalizedModel,
@@ -413,7 +416,10 @@ export async function activate({ provider = AUTO_PROVIDER, apiKey, model, baseUR
   if (p === AUTO_PROVIDER) {
     const detected = await detectProvider(OpenAI, normalizedKey, model)
     applyConfig(detected.provider, normalizedKey, detected.model)
+    let existing2 = {}
+    try { existing2 = JSON.parse(fs.readFileSync(paths.configFile, 'utf-8')) } catch {}
     writeStoredConfig({
+      ...existing2,
       provider: detected.provider,
       apiKey: normalizedKey,
       model: detected.model,
@@ -443,7 +449,10 @@ export async function activate({ provider = AUTO_PROVIDER, apiKey, model, baseUR
   }
 
   applyConfig(p, normalizedKey, normalizedModel)
+  let existing3 = {}
+  try { existing3 = JSON.parse(fs.readFileSync(paths.configFile, 'utf-8')) } catch {}
   writeStoredConfig({
+    ...existing3,
     provider: p,
     apiKey: normalizedKey,
     model: normalizedModel,

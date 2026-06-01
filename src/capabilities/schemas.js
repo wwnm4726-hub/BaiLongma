@@ -737,7 +737,7 @@ To play music, use media_mode with mode=music and src=file_path to show the reco
             description: 'Optional display hint. All fields have reasonable defaults.',
             properties: {
               placement: { type: 'string', enum: ['notification', 'center', 'floating', 'stage'], description: 'notification=top-right stacked slide-in (default); center=centered with overlay; floating=free draggable; stage=fullscreen.' },
-              size:      { description: 'Size: sm | md | lg | xl, or pixel object { w, h }.', oneOf: [{ type: 'string', enum: ['sm', 'md', 'lg', 'xl'] }, { type: 'object', properties: { w: { type: ['number', 'string'] }, h: { type: ['number', 'string'] } } }] },
+              size:      { type: 'string', description: 'Size: sm | md | lg | xl, or JSON object like {\"w\":300,\"h\":200}.' },
               draggable: { type: 'boolean', description: 'Whether draggable. floating defaults true.' },
               modal:     { type: 'boolean', description: 'Show translucent overlay. center defaults true.' },
               enter:     { type: 'string', description: 'Enter animation, inferred from placement by default.' },

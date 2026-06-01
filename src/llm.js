@@ -33,7 +33,11 @@ async function streamOnce({ messages, toolSchemas, temperature, topP, maxTokens,
     temperature,
     messages,
     stream: true,
-    stream_options: { include_usage: true },
+  }
+
+  // stream_options 是较新的 OpenAI API 特性，部分三方提供商不支持
+  if (config.provider !== 'moonshot' && config.provider !== 'zhipu' && config.provider !== 'qwen') {
+    requestParams.stream_options = { include_usage: true }
   }
 
   if (typeof topP === 'number' && topP > 0) requestParams.top_p = topP
@@ -46,8 +50,6 @@ async function streamOnce({ messages, toolSchemas, temperature, topP, maxTokens,
       // DeepSeek 拒绝 reasoning_effort 与 thinking.type='disabled' 组合
       requestParams.thinking = { type: 'disabled' }
     }
-  } else {
-    if (!thinking) requestParams.thinking = { type: 'disabled' }
   }
   if (maxTokens) requestParams.max_tokens = maxTokens
   if (toolSchemas.length > 0) {
@@ -230,6 +232,12 @@ async function streamOnceWithRetry(args) {
     try {
       return await streamOnce(args)
     } catch (err) {
+      // 所有 provider 的请求级错误都打印完整信息，方便排查
+      const status = err.status ?? err.response?.status
+      const code = err.code || err.cause?.code || ''
+      console.error(`[LLM DEBUG] attempt=${attempt+1}/${MAX_ATTEMPTS} status=${status} code=${code} msg=${err.message?.slice(0,200)}`)
+      try { const raw = JSON.stringify(err.error || err.body || err.response?.body, null, 2); console.error('[LLM DEBUG] raw error body:', raw.slice(0, 500)) } catch {}
+
       if (err.name === 'AbortError' || args.signal?.aborted) throw err
       if (err.hadContent) throw err
       if (!isTransientError(err)) throw err

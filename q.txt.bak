@@ -1,17 +1,7 @@
 ── L1 message from ID:000001 ──
-[focus-classifier] v0=pushed topic=[现在,几点,在几点] → LLM 超时 (800ms 硬超时, 实际 804ms) → 回退 v0
-[配额] 本轮 tokens: 12177 (prompt cache: 7424/12127 = 61.2%)
-
-Jarvis: 18:18。
-[protocol fallback] Model did not call send_message — delivering response body to ID:000001
-[quota] 1/500 RPM | 12177/20000000 TPM | ratio 0.2% | queue U:0 B:0 | next tick 1200s
-[配额] 本轮 tokens: 390 (prompt cache: 0/361 = 0.0%)
-[配额] 本轮 tokens: 2420 (prompt cache: 2176/2334 = 93.2%)
-[工具调用] skip_recognition
-[工具结果] skip_recognition: {"ok":true,"skipped":true,"reason":"Casual time query, no long-term memory needed."}
-[配额] 本轮 tokens: 2457 (prompt cache: 2304/2455 = 93.8%)
-[识别器] 显式跳过
-[整合循环] 无候选实体（fact/person 记忆数均 <3）
-
-
-两个声音同时说话。
+[LLM DEBUG] provider: moonshot baseURL: https://api.moonshot.cn/v1
+[LLM DEBUG] model: moonshot-v1-32k
+[LLM DEBUG] msgs: 8 has stream_options: false has thinking: false tools: 19 max_tokens: undefined
+LLM call failed: 400 Invalid request: tokenization failed
+[system] Message dropped after 3 retries: 你好
+[quota] 0/500 RPM | 0/20000000 TPM | ratio 0.0% | queue U:0 B:0 | next tick 1200s
