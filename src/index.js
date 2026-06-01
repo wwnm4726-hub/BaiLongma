@@ -1,4 +1,4 @@
-import { config, getMinimaxKey as _getMinimaxKey, getSecurity } from './config.js'
+import { config, getMinimaxKey as _getMinimaxKey, getSecurity, getTTSCredentials } from './config.js'
 import { callLLM } from './llm.js'
 import { buildSystemPrompt, buildContextBlock, combinePromptForPreview } from './prompt.js'
 import { runRecognizer } from './memory/recognizer.js'
@@ -656,6 +656,14 @@ function isVoiceChannel(channel) {
   return channel === 'voice' || channel === '语音识别' || channel === 'FocusBanner'
 }
 
+function shouldAutoSpeak(msg) {
+  if (isVoiceChannel(msg?.channel)) return true
+  try {
+    const creds = getTTSCredentials()
+    return creds.ttsVoiceReply === 'true'
+  } catch { return false }
+}
+
 function isFastUserMessage(msg) {
   return !!msg && getProcessPriority(msg) >= PRIORITY.user
 }
@@ -789,6 +797,7 @@ async function runTurn(input, label, msg = null) {
   const controller = new AbortController()
   let llmResult = null
   let toolCallLog = []
+  let ttsAlreadySpoken = false
 
   console.log(`\n── ${label} ──`)
   emitEvent(isTick ? 'tick' : 'message_received', { label, input: input.slice(0, 300) })
@@ -1158,9 +1167,9 @@ async function runTurn(input, label, msg = null) {
         toolCallLog.push({ name, args, result: resultText.slice(0, 500), ok })
         // 注：send_message 的 conversations 写入已由 executor.js 内统一处理（带 channel + external_party_id）
         // 这里仅处理语音输入的 TTS 自动回放
-        if (name === 'send_message' && args?.content && isVoiceChannel(msg?.channel)) {
+        if (name === 'send_message' && args?.content && shouldAutoSpeak(msg)) {
           const cleanedContent = trimAssistantFluff(args.content)
-          if (cleanedContent) autoSpeakForVoiceReply(cleanedContent)
+          if (cleanedContent) { autoSpeakForVoiceReply(cleanedContent); ttsAlreadySpoken = true }
         }
       },
       onRetry: ({ attempt, nextAttempt, maxAttempts, delayMs, error }) => {
@@ -1227,7 +1236,7 @@ async function runTurn(input, label, msg = null) {
       const timestamp = nowTimestamp()
       const blockedContent = 'I did not actually call the required tool, so I cannot claim the operation completed. Please send again — I will execute the tool first, then reply based on the result.'
       console.warn(`[protocol fallback] Blocked a text reply that required a tool call but made none. from=${msg.fromId}`)
-      if (isVoiceChannel(msg.channel)) autoSpeakForVoiceReply(blockedContent)
+      if (!ttsAlreadySpoken && shouldAutoSpeak(msg)) autoSpeakForVoiceReply(blockedContent)
       deliverFallbackReply(msg, blockedContent, timestamp)
       toolCallLog.push({
         name: 'send_message',
@@ -1243,7 +1252,7 @@ async function runTurn(input, label, msg = null) {
     } else if (fallbackContent) {
       const timestamp = nowTimestamp()
       console.warn(`[protocol fallback] Model did not call send_message — delivering response body to ${msg.fromId}`)
-      if (isVoiceChannel(msg.channel)) autoSpeakForVoiceReply(fallbackContent)
+      if (!ttsAlreadySpoken && shouldAutoSpeak(msg)) autoSpeakForVoiceReply(fallbackContent)
       deliverFallbackReply(msg, fallbackContent, timestamp)
       toolCallLog.push({
         name: 'send_message',

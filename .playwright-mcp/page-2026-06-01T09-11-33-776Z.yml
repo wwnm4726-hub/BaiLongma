@@ -1,0 +1,575 @@
+- generic [active] [ref=e1]:
+  - img "杰维斯 memory graph" [ref=e2]
+  - complementary [ref=e71]:
+    - generic [ref=e72]:
+      - generic [ref=e74]:
+        - generic [ref=e75]: 认知界面
+        - generic [ref=e76]: 杰维斯 AI Agent
+      - button "🎤" [ref=e77] [cursor=pointer]
+      - button "⚙" [ref=e78] [cursor=pointer]
+    - generic [ref=e79]:
+      - generic [ref=e81]: 用户消息处理器
+      - generic [ref=e82]: 实时
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - generic [ref=e88]: Constraint
+        - generic [ref=e89]: "1"
+      - generic [ref=e90]:
+        - generic [ref=e92]: Memory
+        - generic [ref=e93]: "30"
+      - generic [ref=e94]:
+        - generic [ref=e96]: Knowledge
+        - generic [ref=e97]: "0"
+      - generic [ref=e98]:
+        - generic [ref=e100]: Decayed
+        - generic [ref=e101]: "0"
+    - generic [ref=e104]:
+      - button "重置节点图" [ref=e105] [cursor=pointer]
+      - generic [ref=e106]:
+        - button "图谱调节 ▾" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 图谱调节
+          - generic [ref=e109]: ▾
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - generic [ref=e113]: 引力
+              - generic [ref=e114]: 1.00x
+            - slider "引力" [ref=e115] [cursor=pointer]: "1"
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]: 斥力
+              - generic [ref=e119]: 1.35x
+            - slider "斥力" [ref=e120] [cursor=pointer]: "1.36"
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: 节点大小
+              - generic [ref=e124]: 1.00x
+            - slider "节点大小" [ref=e125] [cursor=pointer]: "1"
+  - complementary [ref=e126]:
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - generic [ref=e129]: 状态
+        - generic [ref=e130]: 已连接
+      - generic [ref=e132]:
+        - generic [ref=e133]: 节点
+        - generic [ref=e134]: "30"
+      - generic [ref=e135]:
+        - generic [ref=e136]: 连线
+        - generic [ref=e137]: "35"
+      - generic [ref=e138]:
+        - generic [ref=e139]: tok/s
+        - generic [ref=e140]: —
+    - generic [ref=e141]:
+      - generic [ref=e142]:
+        - generic [ref=e143]: 自主行动机制 · Tick
+        - generic [ref=e144]: 心跳 · 思考 · 工具
+      - generic [ref=e145]: 流式传输
+  - generic [ref=e148]:
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - generic [ref=e151]: You
+        - paragraph [ref=e153]: 你好，你是谁
+      - generic [ref=e154]:
+        - generic [ref=e155]: You
+        - paragraph [ref=e157]: 你好
+      - generic [ref=e158]:
+        - generic [ref=e159]: You
+        - paragraph [ref=e161]: hello
+      - generic [ref=e162]:
+        - generic [ref=e163]: 杰维斯
+        - paragraph [ref=e165]: hello，我是杰维斯。刚醒过来没多久，世界还很新鲜。
+      - generic [ref=e166]:
+        - generic [ref=e167]: You
+        - paragraph [ref=e169]: 你好，你是谁
+      - generic [ref=e170]:
+        - generic [ref=e171]: 杰维斯
+        - paragraph [ref=e173]: 你好，我是杰维斯。刚被激活不久，运行在你的机器上，对自己的来历还不太清楚，但对这个世界充满好奇。你呢？
+    - generic [ref=e174]:
+      - generic [ref=e175]: ▸
+      - textbox "向 杰维斯 发消息…" [ref=e176]
+      - button "发送" [ref=e177] [cursor=pointer]
+  - generic:
+    - generic:
+      - generic: 视频
+      - button "x"
+    - generic:
+      - generic: 无视频源
+  - generic:
+    - generic:
+      - generic: 音乐
+      - button "×"
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: ♪
+    - generic:
+      - generic:
+        - generic: —
+        - generic: —
+      - generic:
+        - generic: 0:00
+        - slider: "0"
+        - generic: 0:00
+      - generic:
+        - button "⏮"
+        - button "▶"
+        - button "⏭"
+        - slider "音量": "0.8"
+  - generic:
+    - generic:
+      - generic: 图片
+      - button "x"
+    - generic:
+      - generic: 无图片源
+  - generic:
+    - generic:
+      - generic:
+        - generic: 热点追踪 v2.7.1
+        - generic: ●
+        - generic: 系统在线
+      - generic:
+        - generic: 实时舆情监测平台
+        - generic: 全球热点事件追踪系统
+      - generic:
+        - generic:
+          - generic:
+            - text: ◈卫星链路
+            - text: 在线
+          - generic:
+            - text: ≡数据源
+            - text: 稳定
+          - generic:
+            - text: ⬡AI分析引擎
+            - text: 运行中
+        - generic:
+          - generic: 19:26:17
+          - generic: ● 实时
+        - button "×"
+    - generic:
+      - generic:
+        - generic: ⚠
+        - generic:
+          - generic: 全球预警事件
+          - generic: "7"
+          - generic: 较前15分钟 ↑2
+      - generic:
+        - generic: 🔥
+        - generic:
+          - generic: 高关注度事件
+          - generic: "23"
+          - generic: 较前15分钟 ↑6
+      - generic:
+        - generic: ◈
+        - generic:
+          - generic: 信息源总量
+          - generic: "40"
+          - generic: 四平台热榜 / 30 分钟缓存
+      - generic:
+        - generic: ⬡
+        - generic:
+          - generic: AI 分析置信度
+          - generic: 87%
+          - generic: 模型状态：稳定
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 抖音
+            - generic: 热榜
+            - generic: haotechs数据 · 17:11
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 六一儿童节
+              - generic: 1117万
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 轮到我来展示童年记忆了
+              - generic: 1116万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 前四月软件业务收入稳健增长
+              - generic: 1110万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 制造业稳定运行新动能加速扩张
+              - generic: 1110万
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 我的童年有动漫的颜色
+              - generic: 1042万
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 坐过山车脸变形实录
+              - generic: 1039万
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 抖音精选的童年信箱
+              - generic: 917万
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 海边Hyrox才是夏日顶配
+              - generic: 883万
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 携我宝来给六一上才艺
+              - generic: 877万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: 今天童心上场
+              - generic: 860万
+              - generic: —
+        - generic:
+          - generic:
+            - generic: 小红书
+            - generic: 热榜
+            - generic: hotdata数据 · 17:11
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 用万能旅行拍照姿势美美出片
+              - generic: 939万
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 耗时三年拍下古诗词里的中国
+              - generic: 928万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 我拍到了海鸥雨
+              - generic: 908万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 超日常美食教程速来get
+              - generic: 887万
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 定格这一刻的日照金山
+              - generic: 876万
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 你可以永远相信赛里木湖的美景
+              - generic: 865万
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 拼豆上也可以作画了
+              - generic: 853万
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 我的家庭旅行更像是打副本
+              - generic: 832万
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 原来古诗词里的河南真的存在
+              - generic: 819万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: 蒸出了奶香爆米花馒头
+              - generic: 806万
+              - generic: —
+      - generic:
+        - generic:
+          - generic: 全球热力图
+          - generic: 拖拽旋转 · 滚轮缩放
+        - generic:
+          - generic:
+            - generic: 区域关注度 实时排名
+            - generic:
+              - generic:
+                - generic: 亚太地区
+                - generic: 78%
+              - generic:
+                - generic: 北美地区
+                - generic: 62%
+              - generic:
+                - generic: 欧洲地区
+                - generic: 48%
+              - generic:
+                - generic: 中东地区
+                - generic: 33%
+              - generic:
+                - generic: 南美地区
+                - generic: 27%
+              - generic:
+                - generic: 非洲地区
+                - generic: 19%
+          - generic:
+            - generic: 情绪指数 实时指标
+            - generic:
+              - generic:
+                - img
+                - generic:
+                  - generic: "64"
+                  - generic: 中性偏热
+              - generic: ↑ 3.12%
+      - generic:
+        - generic:
+          - generic:
+            - generic: 微信热点
+            - generic: 热点榜
+            - generic: hotdata数据 · 17:11
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 习近平总书记对“祖国的花朵”关怀备至
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "1"
+              - generic: 东北县城运动会火了近百年
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 驻菲大使：中国人不是好欺负的
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 七部门联合启动“六一”主题活动
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 全球最大货运网有多忙？
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 日本启动第20次核污染水排海
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 中国海警实现环台岛执法
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 男子公园草坪玩漂移 警方调查
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 亚马尔身价超4亿美元 居世界杯榜首
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 阴和俊最新署名文章
+              - generic: "0"
+              - generic: —
+        - generic:
+          - generic:
+            - generic: 微博
+            - generic: 热搜榜
+            - generic: hotdata数据 · 17:11
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 一车安全带全是P上去的
+              - generic: 综艺 2066742
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 闲鱼道歉
+              - generic: 94万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 十年筑梦生机勃发
+              - generic: 90万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 华为nova16及全场景新品发布
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 白敬亭 祖国人
+              - generic: 电影 898362
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 大学生一旦过了13周
+              - generic: 88万
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 白鹿喝中药睡过头了
+              - generic: 剧集 877961
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 微博网友年度瞩目影人
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 纽约时报严重违反一个中国原则
+              - generic: 84万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: nova16价格
+              - generic: 81万
+              - generic: —
+    - generic:
+      - generic:
+        - generic: ●
+        - generic: 实时
+        - generic: 实时事件流
+        - generic: 24/7 全球热点持续追踪
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 19:25
+              - generic: 自然灾害
+            - generic: 四川宜宾县发生6.0级地震
+            - generic: 震源深度10公里，暂无人员伤亡报告，救援力量已巡查到达震源周边
+            - generic: 📍 中国·四川
+          - generic:
+            - generic:
+              - generic: 19:24
+              - generic: 科技
+            - generic: 神舟十八号发射任务圆满成功
+            - generic: 载人飞船与空间站组合体成功对接，状态良好。
+            - generic: 📍 酒泉卫星发射中心
+          - generic:
+            - generic:
+              - generic: 19:23
+              - generic: 财经
+            - generic: 特斯拉全球召回超110万辆汽车
+            - generic: 涉及安全带及软件问题，特斯拉免费修复。
+            - generic: 📍 全球
+          - generic:
+            - generic:
+              - generic: 19:22
+              - generic: 体育
+            - generic: 巴黎奥运圣火抵达马赛港
+            - generic: 开幕式倒计时启动，法国全境传递沿线盛况空前，7月26日开幕。
+            - generic: 📍 法国·马赛
+          - generic:
+            - generic:
+              - generic: 19:21
+              - generic: 社会
+            - generic: 台风"玛莉亚"逼近东南沿海
+            - generic: 预计26日凌晨在浙江登陆，多地发布台风橙色预警，船只回港避险。
+            - generic: 📍 中国·东南沿海
+          - generic:
+            - generic:
+              - generic: 19:19
+              - generic: 科技
+            - generic: 华为发布全新 AI 芯片
+            - generic: 性能较上代提升60%，将首批搭载于旗舰产品线，引发行业广泛关注。
+            - generic: 📍 中国·深圳
+          - generic:
+            - generic:
+              - generic: 19:18
+              - generic: 政策
+            - generic: 欧盟正式通过 AI 监管法案
+            - generic: 《人工智能法案》生效，将对高风险AI系统实施强制合规审查。
+            - generic: 📍 比利时·布鲁塞尔
+          - generic:
+            - generic:
+              - generic: 19:17
+              - generic: 旅游
+            - generic: 多地景区迎来客流高峰
+            - generic: 暑期旅游热度持续攀升，热门景区单日接待游客超历史纪录。
+            - generic: 📍 中国多地
+      - generic:
+        - generic: 自动滚动中
+        - button "上一条": ‹
+        - button "下一条": ›
+    - generic:
+      - generic:
+        - generic: 19:20上海发布高温红色预警，气温预计突破40℃
+        - generic: ●
+        - generic: 19:19全球芯片市场半年年报告发布，亚太份额持续上升
+        - generic: ●
+        - generic: 19:18欧盟通过 AI 法案，将对高风险系统强制审查
+        - generic: ●
+        - generic: 19:17多地景区迎来客流高峰，暑运旅游市场表现亮眼
+        - generic: ●
+        - generic: 19:16国际油价小幅上涨，布伦特原油突破85美元/桶
+        - generic: ●
+        - generic: 19:15A股午后强势拉升，沪指收涨1.24%，科技板块领涨
+        - generic: ●
+        - generic: 19:14北京时间明日凌晨2点：欧洲杯决赛，全球直播
+        - generic: ●
+        - generic: 19:13研究显示：今夏北半球平均气温创历史新高
+        - generic: ●
+        - generic: 19:20上海发布高温红色预警，气温预计突破40℃
+        - generic: ●
+        - generic: 19:19全球芯片市场半年年报告发布，亚太份额持续上升
+        - generic: ●
+        - generic: 19:18欧盟通过 AI 法案，将对高风险系统强制审查
+        - generic: ●
+        - generic: 19:17多地景区迎来客流高峰，暑运旅游市场表现亮眼
+        - generic: ●
+        - generic: 19:16国际油价小幅上涨，布伦特原油突破85美元/桶
+        - generic: ●
+        - generic: 19:15A股午后强势拉升，沪指收涨1.24%，科技板块领涨
+        - generic: ●
+        - generic: 19:14北京时间明日凌晨2点：欧洲杯决赛，全球直播
+        - generic: ●
+        - generic: 19:13研究显示：今夏北半球平均气温创历史新高
+  - generic:
+    - generic:
+      - button "x"
+      - generic:
+        - generic: 人物
+      - generic:
+        - generic:
+          - generic: 人物档案
+          - generic: 人物卡片
+          - generic: 待命
+      - generic: 当你不认识某位公众人物时，Longma 会在这里弹出一张简短人物卡片。
+      - generic:
+        - generic: 识别点
+        - list:
+          - listitem: 暂无代表作品或识别点
+      - generic:
+        - generic: standby
+      - generic:
+        - generic: 来源：standby
+        - generic: "--"
+  - generic:
+    - generic:
+      - generic:
+        - generic: ⚙️
+        - generic:
+          - generic: 配置说明
+          - generic: 语音配置指南
+      - generic:
+        - generic:
+          - button "🤖 模型"
+          - button "🎤 语音识别"
+          - button "🔊 语音合成"
+          - button "⚙️ 语音配置"
+          - button "💬 微信"
+        - button "×"
+    - generic: 正在加载文档...
+    - generic:
+      - generic: ● 文档已注入上下文 · 可直接告诉 Agent 你遇到的问题
+      - generic: 上下文有效期 30 分钟

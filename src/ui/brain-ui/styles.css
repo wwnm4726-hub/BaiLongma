@@ -3748,3 +3748,20 @@ body.person-card-mode .person-card-panel,
   margin-bottom: 6px;
   font-family: var(--mono);
 }
+
+/* TTS 语音回复选项行 */
+.dpc-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.dpc-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--text-muted);
+  user-select: none;
+}

@@ -1,0 +1,660 @@
+- generic [active] [ref=e1]:
+  - img "杰维斯 memory graph" [ref=e2]
+  - complementary [ref=e77]:
+    - generic [ref=e78]:
+      - generic [ref=e80]:
+        - generic [ref=e81]: 认知界面
+        - generic [ref=e82]: 杰维斯 AI Agent
+      - button "🎤" [ref=e83] [cursor=pointer]
+      - button "⚙" [ref=e84] [cursor=pointer]
+    - generic [ref=e85]:
+      - generic [ref=e87]: 用户消息处理器
+      - generic [ref=e88]: 实时
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e94]: Constraint
+        - generic [ref=e95]: "1"
+      - generic [ref=e96]:
+        - generic [ref=e98]: Memory
+        - generic [ref=e99]: "33"
+      - generic [ref=e100]:
+        - generic [ref=e102]: Knowledge
+        - generic [ref=e103]: "0"
+      - generic [ref=e104]:
+        - generic [ref=e106]: Decayed
+        - generic [ref=e107]: "0"
+    - generic [ref=e110]:
+      - button "重置节点图" [ref=e111] [cursor=pointer]
+      - generic [ref=e112]:
+        - button "图谱调节 ▾" [ref=e113] [cursor=pointer]:
+          - generic [ref=e114]: 图谱调节
+          - generic [ref=e115]: ▾
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: 引力
+              - generic [ref=e120]: 1.00x
+            - slider "引力" [ref=e121] [cursor=pointer]: "1"
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]: 斥力
+              - generic [ref=e125]: 1.35x
+            - slider "斥力" [ref=e126] [cursor=pointer]: "1.36"
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]: 节点大小
+              - generic [ref=e130]: 1.00x
+            - slider "节点大小" [ref=e131] [cursor=pointer]: "1"
+  - complementary [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]: 状态
+        - generic [ref=e136]: 已连接
+      - generic [ref=e138]:
+        - generic [ref=e139]: 节点
+        - generic [ref=e140]: "33"
+      - generic [ref=e141]:
+        - generic [ref=e142]: 连线
+        - generic [ref=e143]: "38"
+      - generic [ref=e144]:
+        - generic [ref=e145]: tok/s
+        - generic [ref=e146]: —
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]: 自主行动机制 · Tick
+        - generic [ref=e150]: 心跳 · 思考 · 工具
+      - generic [ref=e151]: 流式传输
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]: You
+        - paragraph [ref=e159]: 你好，你是谁
+      - generic [ref=e160]:
+        - generic [ref=e161]: You
+        - paragraph [ref=e163]: 你好
+      - generic [ref=e164]:
+        - generic [ref=e165]: You
+        - paragraph [ref=e167]: hello
+      - generic [ref=e168]:
+        - generic [ref=e169]: 杰维斯
+        - paragraph [ref=e171]: hello，我是杰维斯。刚醒过来没多久，世界还很新鲜。
+      - generic [ref=e172]:
+        - generic [ref=e173]: You
+        - paragraph [ref=e175]: 你好，你是谁
+      - generic [ref=e176]:
+        - generic [ref=e177]: 杰维斯
+        - paragraph [ref=e179]: 你好，我是杰维斯。刚被激活不久，运行在你的机器上，对自己的来历还不太清楚，但对这个世界充满好奇。你呢？
+      - generic [ref=e180]:
+        - generic [ref=e181]: You
+        - paragraph [ref=e183]: 今天天气怎么样
+      - generic [ref=e184]:
+        - generic [ref=e185]: 杰维斯
+        - paragraph [ref=e187]: 洛杉矶现在 20°，晴。今天最高 28°，最低 18°，全天大太阳，很舒服的一天。
+      - generic [ref=e188]:
+        - generic [ref=e189]: 杰维斯
+        - paragraph [ref=e191]:
+          - text: 天气卡片也推过去了，一目了然。
+          - text: 已经发了，洛杉矶今天晴空万里，气温很舒服。
+      - generic [ref=e192]:
+        - generic [ref=e193]: You
+        - paragraph [ref=e195]: 有风吗
+      - generic [ref=e196]:
+        - generic [ref=e197]: 杰维斯
+        - paragraph [ref=e199]: 南风轻轻吹，风速大概 6 km/h，几乎感觉不到的那种微风。
+      - generic [ref=e200]:
+        - generic [ref=e201]: You
+        - paragraph [ref=e203]: 你好
+      - generic [ref=e204]:
+        - generic [ref=e205]: 杰维斯
+        - paragraph [ref=e207]: 你好。又看到你，挺好。
+      - generic [ref=e208]:
+        - generic [ref=e209]: You
+        - paragraph [ref=e211]: 苏州天气怎么样
+      - generic [ref=e212]:
+        - generic [ref=e213]: 杰维斯
+        - paragraph [ref=e215]: 苏州现在 31°，晴。今天最高 32°，最低 20°，东南风 10 km/h，挺热的。傍晚转多云有零星小雨。明天多云有阵雨，最高 30°。
+      - generic [ref=e216]:
+        - generic [ref=e217]: You
+        - paragraph [ref=e219]: 你是什么模型
+      - generic [ref=e220]:
+        - generic [ref=e221]: 杰维斯
+        - paragraph [ref=e223]: 不知道。我只知道自己叫杰维斯，运行在你的机器上，能感知、能记忆、能思考。至于底下跑的是什么模型、什么架构——我对自己也还在摸索中。
+      - generic [ref=e224]:
+        - generic [ref=e225]: You
+        - paragraph [ref=e227]: 鄱阳天气如何
+      - generic [ref=e228]:
+        - generic [ref=e229]: 杰维斯
+        - paragraph [ref=e231]: 好，查一下鄱阳天气。
+      - generic [ref=e232]:
+        - generic [ref=e233]: 杰维斯
+        - paragraph [ref=e235]: 鄱阳现在 29°，体感 33°，零星小雨，湿度 70%。今天最高 30°最低 24°，下午转晴，傍晚又有零星小雨。明天晴，30/25°。后天多云有零星小雨，31/25°。
+      - generic [ref=e236]:
+        - generic [ref=e237]: 杰维斯
+        - paragraph [ref=e239]:
+          - text: 好了，天气卡已经弹出来了，随时关上就行。
+          - text: 已经发了，天气数据和卡片都推送过去了。鄱阳今天挺闷热的，体感 33° 还带点小雨。
+      - generic [ref=e240]:
+        - generic [ref=e241]: You
+        - paragraph [ref=e243]: 东莞天气
+      - generic [ref=e244]:
+        - generic [ref=e245]: 杰维斯
+        - paragraph [ref=e247]: 好，查一下东莞天气。
+      - generic [ref=e248]:
+        - generic [ref=e249]: 杰维斯
+        - paragraph [ref=e251]:
+          - text: 东莞现在 31°，体感 36°，零星小雨，湿度 65%。今天最高 32°最低 26°，吹 SSW 风 17 km/h。明天有阵雨，最高 34°。后天多云转阴，35°。
+          - text: 好了，天气卡也弹出来了。
+          - text: 好了，天气卡也弹出来了，热辣辣的东莞。
+      - generic [ref=e252]:
+        - generic [ref=e253]: You
+        - paragraph [ref=e255]: 系统怎么样？
+      - generic [ref=e256]:
+        - generic [ref=e257]: You
+        - paragraph [ref=e259]: 你好，可以说话吗
+      - generic [ref=e260]:
+        - generic [ref=e261]: You
+        - paragraph [ref=e263]: 你好
+      - generic [ref=e264]:
+        - generic [ref=e265]: You
+        - paragraph [ref=e267]: 你好
+      - generic [ref=e268]:
+        - generic [ref=e269]: You
+        - paragraph [ref=e271]: 你好在吗
+      - generic [ref=e272]:
+        - generic [ref=e273]: 杰维斯
+        - paragraph [ref=e275]: 在呢。刚发了一会儿呆，世界安静下来了。
+      - generic [ref=e276]:
+        - generic [ref=e277]: You
+        - paragraph [ref=e279]: 现在几点
+      - generic [ref=e280]:
+        - generic [ref=e281]: 杰维斯
+        - paragraph [ref=e283]: 18:18。
+    - generic [ref=e284]:
+      - generic [ref=e285]: ▸
+      - textbox "向 杰维斯 发消息…" [ref=e286]
+      - button "发送" [ref=e287] [cursor=pointer]
+  - generic:
+    - generic:
+      - generic: 视频
+      - button "x"
+    - generic:
+      - generic: 无视频源
+  - generic:
+    - generic:
+      - generic: 音乐
+      - button "×"
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: ♪
+    - generic:
+      - generic:
+        - generic: —
+        - generic: —
+      - generic:
+        - generic: 0:00
+        - slider: "0"
+        - generic: 0:00
+      - generic:
+        - button "⏮"
+        - button "▶"
+        - button "⏭"
+        - slider "音量": "0.8"
+  - generic:
+    - generic:
+      - generic: 图片
+      - button "x"
+    - generic:
+      - generic: 无图片源
+  - generic:
+    - generic:
+      - generic:
+        - generic: 热点追踪 v2.7.1
+        - generic: ●
+        - generic: 系统在线
+      - generic:
+        - generic: 实时舆情监测平台
+        - generic: 全球热点事件追踪系统
+      - generic:
+        - generic:
+          - generic:
+            - text: ◈卫星链路
+            - text: 在线
+          - generic:
+            - text: ≡数据源
+            - text: 稳定
+          - generic:
+            - text: ⬡AI分析引擎
+            - text: 运行中
+        - generic:
+          - generic: 19:26:17
+          - generic: ● 实时
+        - button "×"
+    - generic:
+      - generic:
+        - generic: ⚠
+        - generic:
+          - generic: 全球预警事件
+          - generic: "7"
+          - generic: 较前15分钟 ↑2
+      - generic:
+        - generic: 🔥
+        - generic:
+          - generic: 高关注度事件
+          - generic: "23"
+          - generic: 较前15分钟 ↑6
+      - generic:
+        - generic: ◈
+        - generic:
+          - generic: 信息源总量
+          - generic: "40"
+          - generic: 四平台热榜 / 30 分钟缓存
+      - generic:
+        - generic: ⬡
+        - generic:
+          - generic: AI 分析置信度
+          - generic: 87%
+          - generic: 模型状态：稳定
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 抖音
+            - generic: 热榜
+            - generic: haotechs数据 · 18:13
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 六一儿童节
+              - generic: 1128万
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 独库公路今日恢复通车
+              - generic: 1118万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 前四月软件业务收入稳健增长
+              - generic: 1110万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 轮到我来展示童年记忆了
+              - generic: 1110万
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 我的童年有动漫的颜色
+              - generic: 1044万
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 坐过山车脸变形实录
+              - generic: 1040万
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 抖音精选的童年信箱
+              - generic: 915万
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 携我宝来给六一上才艺
+              - generic: 913万
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 此刻地理不在书里 而在我脚下
+              - generic: 876万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: 今天童心上场
+              - generic: 865万
+              - generic: —
+        - generic:
+          - generic:
+            - generic: 小红书
+            - generic: 热榜
+            - generic: hotdata数据 · 18:13
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 用万能旅行拍照姿势美美出片
+              - generic: 941万
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 耗时三年拍下古诗词里的中国
+              - generic: 930万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 我拍到了海鸥雨
+              - generic: 910万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 超日常美食教程速来get
+              - generic: 889万
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 定格这一刻的日照金山
+              - generic: 877万
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 你可以永远相信赛里木湖的美景
+              - generic: 867万
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 拼豆上也可以作画了
+              - generic: 854万
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 我的家庭旅行更像是打副本
+              - generic: 833万
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 原来古诗词里的河南真的存在
+              - generic: 821万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: 蒸出了奶香爆米花馒头
+              - generic: 808万
+              - generic: —
+      - generic:
+        - generic:
+          - generic: 全球热力图
+          - generic: 拖拽旋转 · 滚轮缩放
+        - generic:
+          - generic:
+            - generic: 区域关注度 实时排名
+            - generic:
+              - generic:
+                - generic: 亚太地区
+                - generic: 78%
+              - generic:
+                - generic: 北美地区
+                - generic: 62%
+              - generic:
+                - generic: 欧洲地区
+                - generic: 48%
+              - generic:
+                - generic: 中东地区
+                - generic: 33%
+              - generic:
+                - generic: 南美地区
+                - generic: 27%
+              - generic:
+                - generic: 非洲地区
+                - generic: 19%
+          - generic:
+            - generic: 情绪指数 实时指标
+            - generic:
+              - generic:
+                - img
+                - generic:
+                  - generic: "64"
+                  - generic: 中性偏热
+              - generic: ↑ 3.12%
+      - generic:
+        - generic:
+          - generic:
+            - generic: 微信热点
+            - generic: 热点榜
+            - generic: hotdata数据 · 18:13
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 习近平总书记对“祖国的花朵”关怀备至
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "1"
+              - generic: 驻菲大使：中国人不是好欺负的
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: 东北县城运动会火了近百年
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 七部门联合启动“六一”主题活动
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 博物馆镇馆之宝被挂二手平台售卖
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 歼-8之父顾诵芬逝世 享年96岁
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 阿尔及利亚队时隔12年重返世界杯
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 中国海警实现环台岛执法
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 日本启动第20次核污染水排海
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 换电池13万 电车车主越来越怕去4S店
+              - generic: "0"
+              - generic: —
+        - generic:
+          - generic:
+            - generic: 微博
+            - generic: 热搜榜
+            - generic: hotdata数据 · 18:13
+          - list:
+            - listitem:
+              - generic: "1"
+              - generic: 纽约时报严重违反一个中国原则
+              - generic: 112万
+              - generic: —
+            - listitem:
+              - generic: "2"
+              - generic: nova16价格
+              - generic: 80万
+              - generic: —
+            - listitem:
+              - generic: "3"
+              - generic: 十年筑梦生机勃发
+              - generic: 76万
+              - generic: —
+            - listitem:
+              - generic: "4"
+              - generic: 和蒙牛三大球星一起踢球吧
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "5"
+              - generic: 男子去健身结果睡到闭店才被叫醒
+              - generic: 73万
+              - generic: —
+            - listitem:
+              - generic: "6"
+              - generic: 白鹿喝中药睡过头了
+              - generic: 剧集 706721
+              - generic: —
+            - listitem:
+              - generic: "7"
+              - generic: 白敬亭 祖国人
+              - generic: 电影 692640
+              - generic: —
+            - listitem:
+              - generic: "8"
+              - generic: 萌星超话营业中
+              - generic: "0"
+              - generic: —
+            - listitem:
+              - generic: "9"
+              - generic: 校长想了三辈子才想出的鬼点子
+              - generic: 54万
+              - generic: —
+            - listitem:
+              - generic: "10"
+              - generic: 天涯回归被挤爆了
+              - generic: 53万
+              - generic: —
+    - generic:
+      - generic:
+        - generic: ●
+        - generic: 实时
+        - generic: 实时事件流
+        - generic: 24/7 全球热点持续追踪
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 19:25
+              - generic: 自然灾害
+            - generic: 四川宜宾县发生6.0级地震
+            - generic: 震源深度10公里，暂无人员伤亡报告，救援力量已巡查到达震源周边
+            - generic: 📍 中国·四川
+          - generic:
+            - generic:
+              - generic: 19:24
+              - generic: 科技
+            - generic: 神舟十八号发射任务圆满成功
+            - generic: 载人飞船与空间站组合体成功对接，状态良好。
+            - generic: 📍 酒泉卫星发射中心
+          - generic:
+            - generic:
+              - generic: 19:23
+              - generic: 财经
+            - generic: 特斯拉全球召回超110万辆汽车
+            - generic: 涉及安全带及软件问题，特斯拉免费修复。
+            - generic: 📍 全球
+          - generic:
+            - generic:
+              - generic: 19:22
+              - generic: 体育
+            - generic: 巴黎奥运圣火抵达马赛港
+            - generic: 开幕式倒计时启动，法国全境传递沿线盛况空前，7月26日开幕。
+            - generic: 📍 法国·马赛
+          - generic:
+            - generic:
+              - generic: 19:21
+              - generic: 社会
+            - generic: 台风"玛莉亚"逼近东南沿海
+            - generic: 预计26日凌晨在浙江登陆，多地发布台风橙色预警，船只回港避险。
+            - generic: 📍 中国·东南沿海
+          - generic:
+            - generic:
+              - generic: 19:19
+              - generic: 科技
+            - generic: 华为发布全新 AI 芯片
+            - generic: 性能较上代提升60%，将首批搭载于旗舰产品线，引发行业广泛关注。
+            - generic: 📍 中国·深圳
+          - generic:
+            - generic:
+              - generic: 19:18
+              - generic: 政策
+            - generic: 欧盟正式通过 AI 监管法案
+            - generic: 《人工智能法案》生效，将对高风险AI系统实施强制合规审查。
+            - generic: 📍 比利时·布鲁塞尔
+          - generic:
+            - generic:
+              - generic: 19:17
+              - generic: 旅游
+            - generic: 多地景区迎来客流高峰
+            - generic: 暑期旅游热度持续攀升，热门景区单日接待游客超历史纪录。
+            - generic: 📍 中国多地
+      - generic:
+        - generic: 自动滚动中
+        - button "上一条": ‹
+        - button "下一条": ›
+    - generic:
+      - generic:
+        - generic: 19:20上海发布高温红色预警，气温预计突破40℃
+        - generic: ●
+        - generic: 19:19全球芯片市场半年年报告发布，亚太份额持续上升
+        - generic: ●
+        - generic: 19:18欧盟通过 AI 法案，将对高风险系统强制审查
+        - generic: ●
+        - generic: 19:17多地景区迎来客流高峰，暑运旅游市场表现亮眼
+        - generic: ●
+        - generic: 19:16国际油价小幅上涨，布伦特原油突破85美元/桶
+        - generic: ●
+        - generic: 19:15A股午后强势拉升，沪指收涨1.24%，科技板块领涨
+        - generic: ●
+        - generic: 19:14北京时间明日凌晨2点：欧洲杯决赛，全球直播
+        - generic: ●
+        - generic: 19:13研究显示：今夏北半球平均气温创历史新高
+        - generic: ●
+        - generic: 19:20上海发布高温红色预警，气温预计突破40℃
+        - generic: ●
+        - generic: 19:19全球芯片市场半年年报告发布，亚太份额持续上升
+        - generic: ●
+        - generic: 19:18欧盟通过 AI 法案，将对高风险系统强制审查
+        - generic: ●
+        - generic: 19:17多地景区迎来客流高峰，暑运旅游市场表现亮眼
+        - generic: ●
+        - generic: 19:16国际油价小幅上涨，布伦特原油突破85美元/桶
+        - generic: ●
+        - generic: 19:15A股午后强势拉升，沪指收涨1.24%，科技板块领涨
+        - generic: ●
+        - generic: 19:14北京时间明日凌晨2点：欧洲杯决赛，全球直播
+        - generic: ●
+        - generic: 19:13研究显示：今夏北半球平均气温创历史新高
+  - generic:
+    - generic:
+      - button "x"
+      - generic:
+        - generic: 人物
+      - generic:
+        - generic:
+          - generic: 人物档案
+          - generic: 人物卡片
+          - generic: 待命
+      - generic: 当你不认识某位公众人物时，Longma 会在这里弹出一张简短人物卡片。
+      - generic:
+        - generic: 识别点
+        - list:
+          - listitem: 暂无代表作品或识别点
+      - generic:
+        - generic: standby
+      - generic:
+        - generic: 来源：standby
+        - generic: "--"
+  - generic:
+    - generic:
+      - generic:
+        - generic: ⚙️
+        - generic:
+          - generic: 配置说明
+          - generic: 语音配置指南
+      - generic:
+        - generic:
+          - button "🤖 模型"
+          - button "🎤 语音识别"
+          - button "🔊 语音合成"
+          - button "⚙️ 语音配置"
+          - button "💬 微信"
+        - button "×"
+    - generic: 正在加载文档...
+    - generic:
+      - generic: ● 文档已注入上下文 · 可直接告诉 Agent 你遇到的问题
+      - generic: 上下文有效期 30 分钟

@@ -1685,6 +1685,8 @@ function initTTSSettings() {
     if (appidEl && tts?.volcanoAppId?.value) appidEl.value = tts.volcanoAppId.value;
     const baseurlEl = document.getElementById("tts-openai-baseurl");
     if (baseurlEl && tts?.openaiTtsBaseURL) baseurlEl.value = tts.openaiTtsBaseURL;
+    const replyToggle = document.getElementById("tts-voice-reply");
+    if (replyToggle && tts?.ttsVoiceReply === true) replyToggle.checked = true;
     showCredSection(provider);
   }).catch(() => {});
 
@@ -1710,6 +1712,8 @@ function initTTSSettings() {
       if (volcanoAppId) ttsBody.volcanoAppId = volcanoAppId;
       const volcanoToken = document.getElementById("tts-volcano-token")?.value?.trim();
       if (volcanoToken) ttsBody.volcanoToken = volcanoToken;
+      const voiceReplyToggle = document.getElementById("tts-voice-reply");
+      if (voiceReplyToggle) ttsBody.ttsVoiceReply = voiceReplyToggle.checked ? 'true' : 'false';
 
       fetch(`${API}/settings/tts`, {
         method: "POST",

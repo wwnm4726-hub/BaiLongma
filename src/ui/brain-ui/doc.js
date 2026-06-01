@@ -285,6 +285,19 @@ function renderProviderTabs(defs, activeId, onSwitch) {
   `).join('')}</div>`
 }
 
+function renderTTSToggleHTML() {
+  const checked = cfgTtsState.ttsVoiceReply === true ? 'checked' : ''
+  return `<div class="dpc-row">
+    <div class="dpc-toggle-label">
+      <label class="settings-toggle">
+        <input type="checkbox" id="dpc-tts-voice-reply" data-key="ttsVoiceReply" ${checked}>
+        <span class="settings-toggle-track"></span>
+      </label>
+      <span>文字输入也语音回复</span>
+    </div>
+  </div>`
+}
+
 function renderFields(fields, state) {
   if (!fields || fields.length === 0) {
     return `<div class="dpc-info">MiniMax TTS 使用与 LLM 相同的 API Key，无需额外配置。<br>确保 LLM 已设置 MiniMax 密钥即可。</div>`
@@ -325,6 +338,7 @@ function buildConfigHTML(topicId) {
       <div class="dpc-section-title">⚡ 在此直接配置语音合成</div>
       ${renderProviderTabs(TTS_PROVIDER_DEFS, cfgTtsProvider)}
       <div class="dpc-fields" id="dpc-tts-fields">${renderFields(TTS_FIELDS[cfgTtsProvider], cfgTtsState)}</div>
+      ${renderTTSToggleHTML()}
       <div class="dpc-actions">
         <button class="dpc-save-btn" id="dpc-save-btn" type="button">保存配置</button>
         <span class="dpc-status" id="dpc-status"></span>
@@ -347,6 +361,7 @@ function buildConfigHTML(topicId) {
           <div class="dpc-dual-label">🔊 语音合成</div>
           ${renderProviderTabs(TTS_PROVIDER_DEFS, cfgTtsProvider)}
           <div class="dpc-fields" id="dpc-tts-fields">${renderFields(TTS_FIELDS[cfgTtsProvider], cfgTtsState)}</div>
+          ${renderTTSToggleHTML()}
           <div class="dpc-actions">
             <button class="dpc-save-btn" id="dpc-tts-save-btn" type="button">保存 TTS</button>
             <span class="dpc-status" id="dpc-tts-status"></span>
@@ -360,8 +375,12 @@ function buildConfigHTML(topicId) {
 function collectFieldValues(containerEl) {
   const body = {}
   containerEl.querySelectorAll('[data-key]').forEach(el => {
-    const val = el.value?.trim()
-    if (val) body[el.dataset.key] = val
+    if (el.type === 'checkbox') {
+      body[el.dataset.key] = el.checked ? 'true' : 'false'
+    } else {
+      const val = el.value?.trim()
+      if (val) body[el.dataset.key] = val
+    }
   })
   return body
 }
@@ -439,7 +458,12 @@ function bindConfigForm(topicId) {
       const fieldsEl = $(fieldsId)
       if (!fieldsEl) return
       const body = collectFieldValues(fieldsEl)
-      if (!isAsr) body.ttsProvider = cfgTtsProvider
+      if (!isAsr) {
+        body.ttsProvider = cfgTtsProvider
+        // 读取 toggle（在 dpc-tts-fields 外部）
+        const toggle = $('dpc-tts-voice-reply')
+        if (toggle) body.ttsVoiceReply = toggle.checked ? 'true' : 'false'
+      }
       await saveConfig(endpoint, body, $('dpc-status'))
     })
   }
@@ -459,6 +483,9 @@ function bindConfigForm(topicId) {
       if (fieldsEl) {
         const body = collectFieldValues(fieldsEl)
         body.ttsProvider = cfgTtsProvider
+        // 读取 toggle（在 dpc-tts-fields 外部）
+        const toggle = $('dpc-tts-voice-reply')
+        if (toggle) body.ttsVoiceReply = toggle.checked ? 'true' : 'false'
         await saveConfig('/settings/tts', body, $('dpc-tts-status'))
       }
     })

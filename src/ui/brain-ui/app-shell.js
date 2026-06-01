@@ -480,6 +480,14 @@ const createSettingsModal = () => `
             </div>
 
             <div class="settings-row" style="margin-top:8px;">
+              <label class="settings-toggle">
+                <input type="checkbox" id="tts-voice-reply">
+                <span class="settings-toggle-track"></span>
+              </label>
+              <label class="settings-label" for="tts-voice-reply" style="flex:none;cursor:pointer;">文字输入也语音回复</label>
+            </div>
+
+            <div class="settings-row" style="margin-top:6px;">
               <button class="settings-save-btn" id="tts-test-btn" type="button" style="padding:4px 12px;font-size:12px;">试听</button>
               <span id="tts-test-status" style="color:var(--ink2);font-size:12px;margin-left:8px;"></span>
             </div>
